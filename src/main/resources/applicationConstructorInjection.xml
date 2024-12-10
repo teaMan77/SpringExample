@@ -6,12 +6,12 @@
 
     <!-- bean definitions here -->
     <bean id="carSpec" class="car.example.constructorInjection.Specification">
-        <property name="company" value="Toyota"></property>
-        <property name="model" value="Innova"></property>
+        <property name="company" value="Toyota"/>
+        <property name="model" value="Innova"/>
     </bean>
 
     <bean id="myCar" class="car.example.constructorInjection.Car">
-        <constructor-arg ref="carSpec"></constructor-arg>
+        <constructor-arg ref="carSpec"/>
     </bean>
 
 </beans>
