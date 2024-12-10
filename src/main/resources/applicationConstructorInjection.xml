@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="carSpec" class="car.example.constructorInjection.Specification">
+        <property name="company" value="Toyota"></property>
+        <property name="model" value="Innova"></property>
+    </bean>
+
+    <bean id="myCar" class="car.example.constructorInjection.Car">
+        <constructor-arg ref="carSpec"></constructor-arg>
+    </bean>
+
+</beans>
