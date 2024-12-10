@@ -1,13 +1,20 @@
 package com.example.componentScan;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component //by default a bean with the name 'employee' is created based on the class name/
 // @Component("customName") -- to create a bean with custom name.
 public class Employee {
     private int id;
+
+    @Value("Hello") //injecting a string
     private String firstName;
+
+    @Value("${java.home}") //injecting a property
     private String lastName;
+
+    @Value("#{40*50}") //injecting an expression
     private double salary;
 
     public int getId() {
